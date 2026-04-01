@@ -59,3 +59,10 @@ non-ignored file under the target path is newer than that stamp.
 That gives you fast incremental behavior for expensive tasks, but it feels like something Taskfile
 could support directly. A built-in primitive for content-aware task freshness would be simpler, more
 portable, and easier to reuse across projects.
+
+## More
+
+- [Bash Strict Mode](https://github.com/guettli/bash-strict-mode)
+- [How I use Direnv](https://github.com/guettli/How-I-use-direnv/)
+- [Switching to Nix](https://github.com/guettli/switching-to-nix)
+- [Thomas WOL: Working out Loud](https://github.com/guettli/wol)
