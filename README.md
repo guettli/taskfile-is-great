@@ -48,4 +48,18 @@ your infrastructure-as-code tooling.
 
 ## Missing Feature
 
+One feature I still miss is native support for "skip this task unless files in
+this path changed since the last successful run".
+
+In this repository, the `lint` task works around that gap with
+[`scripts/git-worktree-has-changed.sh`](./scripts/git-worktree-has-changed.sh).
+The script stores a stamp file after a successful run and checks whether any
+tracked or untracked, non-ignored file under the target path is newer than that
+stamp.
+
+That gives you fast incremental behavior for expensive tasks, but it feels like
+something Taskfile could support directly. A built-in primitive for
+content-aware task freshness would be simpler, more portable, and easier to
+reuse across projects.
+
 [git-worktree-has-changed.sh](https://github.com/guettli/git-tips/blob/main/scripts/git-worktree-has-changed.sh)
